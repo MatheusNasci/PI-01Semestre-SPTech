@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador SmartParking</title>
+
+</head>
+
+<body>
+    <h1 style="color: red">SmartParking</h1>
+
+    <h2>Temos dados que podem ajudar na melhor gestação do seu estacionamento</h2>
+
+    Qual total de vagas seu estacionamento:
+    <input id="numVagas" type="text" placeholder="Número de vagas"><br>
+    <br>
+
+    Quanto custa 1 hora:
+    <input id="valorEstacionamento" type="text" placeholder="Valor por hora"><br>
+    <br>
+
+    <button onclick="btnCalcular()">Calcular</button><br>
+    <br>
+
+    <span id="span"></span>
+
+</body>
+
+</html>
+<script>
+
+    function btnCalcular() {
+
+        var vaga = Number(numVagas.value);
+        var valor = Number(valorEstacionamento.value);
+        var conta = vaga * valor;
+
+        // Fazendo a conta como se todo o mês tivesse 30 dias
+        span.innerHTML = `<h3>Se o seu estacionamento estiver cheio (100% ocupado) em 12 horas você irá lucrar <span style="color: green"><b>R$
+            ${(conta * 12).toFixed(2)}</b></span> reais e em <br>24 horas <span style="color: green"><b>R$${(conta * 24).toFixed(2)} reais</b></span> em um 
+            mês com o estacionamento aberto por 12 horas por dia lucraria <span style="color: green"><b>R$${(conta * 360).toFixed(2)} reais</b></span>
+            </h3>
+            
+            <h2><b style="color: blue">Rentabilidade baseado na % da <br>ocupação do estacionamento por hora</b><br></h2>
+            com 90%: R$ <i>${(conta * 0.9).toFixed(2)}</i><br>
+            com 70%: R$ <i>${(conta * 0.7).toFixed(2)}</i><br>
+            com 50%: R$ <i>${(conta * 0.5).toFixed(2)}</i><br>
+            com 20%: R$ <i>${(conta * 0.2).toFixed(2)}</i><br>
+            com 5%:  R$ <i>${(conta * 0.05).toFixed(2)}</i>    
+        `;
+        
+
+        (numVagas.value = "");
+        (valorEstacionamento.value = "");
+    }
+
+</script>
