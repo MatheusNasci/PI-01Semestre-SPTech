@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+}
+
+body{
+    background-color: #CFCFC4
+}
+
+.div_b{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 500px;
+    width: 50vw;
+    border: 10px dotted black;
+    justify-content: center;
+    
+}
+
+.div_c{
+    background-color: yellow;
+    height: 50px;
+    width: 30%;
+}
+
+.div_d{
+    background-color: rgb(236, 82, 26);
+    height: 100px;
+    width: 30%;
+}
+
+.div_e{
+    background-color: rgb(81, 252, 81);
+    color: whitesmoke;
+    font-size: 30px;
+    padding: 50px;
+    margin-left: 50px;
+    margin-top: 50px;
+}

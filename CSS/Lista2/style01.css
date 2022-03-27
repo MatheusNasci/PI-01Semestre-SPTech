@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#div_a{
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    border: 2px solid green;
+    margin: 100px;
+}
+
+#div_b{
+    background-color: black;
+    height: 50vw;
+    width: 50%;
+    border: 10px dashed red;
+    margin-left: 100px;
+    margin-top: 100px;
+}

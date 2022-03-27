@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#div_a{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(238, 176, 238);
+    height: 250px;
+    width: 100%;
+}
+
+.div_b{
+    background-color: rgb(248, 132, 151);
+    height: 100%;
+    width: 250px;
+    border: 20px dashed red;
+}
+
+.div_c{
+    background-color:aquamarine;
+    height: 88%;
+    width: 30%;
+}

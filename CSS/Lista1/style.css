@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'monospace';
+}
+
+#div_a {
+    background-color: #4A2040;
+    height: 500px;
+    width: 500px;
+}
+
+#div_b {
+    background-color: #9F6BA0;
+    height: 250px;
+    width: 250px;
+}
+
+p{
+    color: white;
+    background-color: #F5CCE8;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#div_d{
+    width: 50%;
+    height: 50vh;
+    background-color: #C880B7;
+}   
+
+#div_e{
+    width: 75vw;
+    height: 50%;
+    background-color: violet;
+}
