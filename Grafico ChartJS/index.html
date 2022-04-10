@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>ChartJs</title>
+</head>
+
+<body style="display: flex;">
+    <div>
+        <canvas id="myChartGrafico" style="position: relative; height: 40vh; width: 40vw;"></canvas>
+    </div>
+    <div>
+        <canvas id="myChartBarra" style="position: relative; height: 40vh; width: 40vw;"></canvas>
+    </div>
+    <div>
+        <canvas id="myChartDonut" style="position: relative; height: 20vh; width: 20vw;"></canvas>
+    </div>
+</body>
+<script>
+    // Eixo X 
+    const labelsGrafico = [
+        '12:00',
+        '13:00',
+        '14:00',
+        '15:00',
+        '16:00',
+        '16:00',
+    ];
+
+    const dataGrafico = {
+        labels: labelsGrafico,
+        datasets: [{
+            label: 'Temperatura',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [30, 29, 28, 25, 22, 23],
+        },
+        {
+            label: 'Umidade',
+            backgroundColor: 'rgb(0, 0, 255)',
+            borderColor: 'rgb(0, 0, 255)',
+            data: [80, 82, 80, 85, 80, 83],
+        }]
+    };
+
+    const configGrafico = {
+        type: 'line',
+        data: dataGrafico,
+        options: {}
+    };
+
+    // Gráfico em barra
+
+    const labelsBarra = [
+        'Janeiro',
+        'Fevereiro',
+        'Março',
+        'Abril',
+        'Maio',
+        'Junho',
+    ];
+
+    const dataBarra = {
+        labels: labelsBarra,
+        datasets: [{
+            label: 'Temperatura',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [22, 24, 27, 23, 20, 18],
+        },
+        {
+            label: 'Umidade',
+            backgroundColor: 'rgb(0, 0, 255)',
+            borderColor: 'rgb(0, 0, 255)',
+            data: [90, 89, 93, 87, 88, 82],
+        }]
+    };
+
+    const configBarra = {
+        type: 'bar',
+        data: dataBarra,
+        options: {}
+    };
+
+    // Gráfico em doughnet
+    const dataDonut = {
+        labels: [
+            'Temperatura',
+            'Umidade',
+        ],
+        datasets: [{
+            label: 'My First Dataset',
+            data: [100, 350],
+            backgroundColor: [
+                'rgb(255, 99, 132)',
+                'rgb(54, 162, 235)',
+
+            ],
+            hoverOffset: 4
+        }]
+    };
+
+    const configDonut = {
+        type: 'doughnut',
+        data: dataDonut,
+    };
+
+</script>
+
+<script>
+    const myChartGrafico = new Chart(
+        document.getElementById('myChartGrafico'),
+        configGrafico
+    );
+
+    const myChartBarra = new Chart(
+        document.getElementById('myChartBarra'),
+        configBarra
+    );
+
+    const myChartDonut = new Chart(
+        document.getElementById('myChartDonut'),
+        configDonut
+    );
+</script>
+
+</html>
